@@ -4,19 +4,23 @@ const morgan = require('morgan');
 const session = require('express-session');
 const MongoStore = require('connect-mongo');
 const addUserToViews = require('./middleware/addUserToViews');
+const path = require("path");
 require('dotenv').config();
 require('./config/database');
 
 // Controllers
 const authController = require('./controllers/auth');
 const isSignedIn = require('./middleware/isSignedIn');
-
+const products = require('./controllers/products');
 const app = express();
 // Set the port from environment variable or default to 3000
 const port = process.env.PORT ? process.env.PORT : '3000';
 
 // MIDDLEWARE
+// Middleware to serve static files such as images, CSS files, and JavaScript files
 
+
+app.use(express.static(path.join(__dirname, 'public')));
 // Middleware to parse URL-encoded data from forms
 app.use(express.urlencoded({ extended: false }));
 // Middleware for using HTTP verbs such as PUT or DELETE
@@ -41,11 +45,18 @@ app.get('/', async (req, res) => {
   res.render('index.ejs');
 });
 
+app.get( '/controler/products', async (req, res) => {
+  res.render('products.ejs', { imagesData: products }); 
+});
 app.use('/auth', authController);
+ // Add your routes for product details, cart, checkout, etc. here...
 
+
+// Error handling middleware
+ 
 // Protected Routes
 app.use(isSignedIn);
-
+ 
 app.get('/protected', async (req, res) => {
   if (req.session.user) {
     res.send(`Welcome to the party ${req.session.user.username}.`);
