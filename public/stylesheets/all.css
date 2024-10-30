@@ -17,12 +17,12 @@
 
   section#about.about.py-5 {
   background-attachment: fixed;
-  background-image: url("/assets/img/pattern.jpeg");
+  background-image: src("/assets/img/pattern.jpeg");
 }
 
 section#store.store.py-5 {
   background-attachment: fixed;
-  background-image: url("../img/04.jpg");
+  background-image: src("/assets/img/04.jpg");
 }
 
 .fa-lg {
@@ -143,8 +143,8 @@ section#store.store.py-5 {
           transform: rotate(90deg); }
 
 .fa-rotate-180 {
-  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2)";
-  -webkit-transform: rotate(180deg);
+  ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2)";
+  webkit-transform: rotate(180deg);
           transform: rotate(180deg); }
 
 .fa-rotate-270 {

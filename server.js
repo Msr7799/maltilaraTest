@@ -6,18 +6,30 @@ const MongoStore = require('connect-mongo');
 const addUserToViews = require('./middleware/addUserToViews');
 const path = require("path");
 require('dotenv').config();
-require('./config/database');
-
-// Controllers
+require('./config/database'); // Controllers
 const authController = require('./controllers/auth');
 const isSignedIn = require('./middleware/isSignedIn');
-const products = require('./controllers/products');
+const Product = require('./models/Product'); // صحيح
+
+
 const app = express();
 // Set the port from environment variable or default to 3000
 const port = process.env.PORT ? process.env.PORT : '3000';
+//including the css
 
-// MIDDLEWARE
+// static folder /public/
+app.use(express.static(path.join(__dirname, 'public')));
+//static file /all.css
+app.use('/all.css', express.static(path.join(__dirname, 'public', 'stylesheets', 'all.css')));
+// Middleware to parse URL-encoded data from forms
+app.use(express.urlencoded({ extended: false }));
+// Middleware for using HTTP verbs such as PUT or DELETE
+app.use(methodOverride('_method'));
+// Morgan for logging HTTP requests
+app.use(morgan('dev'));
+
 // Middleware to serve static files such as images, CSS files, and JavaScript files
+
 
 
 app.use(express.static(path.join(__dirname, 'public')));
@@ -45,8 +57,19 @@ app.get('/', async (req, res) => {
   res.render('index.ejs');
 });
 
-app.get( '/controler/products', async (req, res) => {
-  res.render('products.ejs', { imagesData: products }); 
+app.get( 'products', async (req, res) => {
+  res.render('products.js', { imagesData: products }); 
+});
+
+//api
+app.get('/api/products', async (req, res) => {
+  try {
+    const products = await Product.find();
+    res.json(products);
+  } catch (error) {
+    console.error('Error fetching products:', error);
+    res.status(500).json({ message: 'Error fetching products' });
+  }
 });
 app.use('/auth', authController);
  // Add your routes for product details, cart, checkout, etc. here...

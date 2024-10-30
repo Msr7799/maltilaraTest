@@ -5,14 +5,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <!-- bootstrap css -->
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-  <!-- main css -->
-  <link rel="stylesheet" href="css/style.css">
-
   <!-- font awesome -->
-  <link rel="stylesheet" href="css/all.css">
-  <title>Cart Project</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.3.1/css/all.min.css" integrity="sha512-KulI0psuJQK8UMpOeiMLDXJtGOZEBm8RZNTyBBHIWqoXoPMFcw+L5AEo0YMpsW8BfiuWrdD1rH6GWGgQBF59Lg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- bootstrap css -->
+  <link rel="stylesheet" href="/stylesheets/bootstrap.min.css">
+  <!-- main css -->
+  <link rel="stylesheet" href="/stylesheets/style.css">
+
+  <link rel="stylesheet" href="/stylesheets/all.css">
+  <title>welcome to maltilara</title>
   <style>
   </style>
 </head>
@@ -27,7 +28,7 @@ Creative Commons (Attribution 3.0 Unported);
 https://www.iconfinder.com/korawan_m
      -->
     <nav class="navbar navbar-expand-lg px-4">
-      <a class="navbar-brand" href="#"><img src="img/logo.svg" alt=""></a>
+      <a class="navbar-brand" href="#"><img src="/assets/img/logo.svg" alt=""></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNav">
         <span class="toggler-icon"><i class="fas fa-bars"></i></span>
       </button>
@@ -45,6 +46,16 @@ https://www.iconfinder.com/korawan_m
         </ul>
         <div class="nav-info-items d-none d-lg-flex ">
         <style>
+         
+          section#about.about.py-5 {
+            background-attachment: fixed;
+            background-image: src("/assets/img/pattern.jpeg");
+          }
+          div.row.max-height.justify-content-center.align-items-center {
+          background-attachment: fixed;
+            background-image: src("/assets/img/04.jpg");
+          }
+          
           nav {
             display: flex;
             align-content: flex-end;
@@ -113,33 +124,10 @@ https://www.iconfinder.com/korawan_m
         </div>
         <div id="cart" class="cart">
           <!-- cart item -->
-          <div class="cart-item d-flex justify-content-between text-capitalize my-3">
-            <img src="img-cart/cake-2.jpeg" class="img-fluid rounded-circle" id="item-img" alt="">
+           <h5> cart item</h5>
+
             <div class="item-text">
-
-              <p id="cart-item-title" class="font-weight-bold mb-0">cart item</p>
-              <span>$</span>
-              <span id="cart-item-price" class="cart-item-price" class="mb-0">10.99</span>
-            </div>
-            <a href="#" id='cart-item-remove' class="cart-item-remove">
-              <i class="fas fa-trash"></i>
-            </a>
-          </div>
-          <!--end of  cart item -->
-          <!-- cart item -->
-          <div class="cart-item d-flex justify-content-between text-capitalize my-3">
-            <img src="img-cart/doughnut-2.jpeg" class="img-fluid rounded-circle" id="item-img" alt="">
-            <div class="cart-item-text">
-
-              <p id="cart-item-title" class="font-weight-bold mb-0">cart item</p>
-              <span>$</span>
-              <span id="cart-item-price" class="cart-item-price" class="mb-0">10.99</span>
-            </div>
-            <a href="#" id='cart-item-remove' class="cart-item-remove">
-              <i class="fas fa-trash"></i>
-            </a>
-          </div>
-          <!--end of  cart item -->
+              <!--end of  cart item -->
           <!-- cart total -->
           <div class="cart-total-container d-flex justify-content-around text-capitalize mt-5">
             <h5>total</h5>
@@ -148,8 +136,8 @@ https://www.iconfinder.com/korawan_m
           <!--end cart total -->
           <!-- cart buttons -->
           <div class="cart-buttons-container mt-3 d-flex justify-content-between">
-            <a href="#" id="clear-cart" class="btn btn-outline-secondary btn-black text-uppercase">clear cart</a>
-            <a href="#" class="btn btn-outline-secondary text-uppercase btn-pink">checkout</a>
+            <a href="/views/index.ejs" id="clear-cart" class="btn btn-outline-secondary btn-black text-uppercase">clear cart</a>
+            <a href="/views/CreditCard.ejs" class="btn btn-outline-secondary text-uppercase btn-pink">checkout</a>
           </div>
           <!--end of  cart buttons -->
           <script>
@@ -184,12 +172,12 @@ https://www.iconfinder.com/korawan_m
             embroidered pieces, all crafted with high-quality fabrics.
             With attention to detail and a focus on modest fashion, 
             this store is the ultimate destination for those seeking timeless and chic abay</p>
-          <a href="#" class="btn btn-outline-secondary btn-black text-uppercase ">explore</a>
+          <a href="#store" class="btn btn-outline-secondary btn-black text-uppercase ">explore</a>
 
         </div>
         <div class="col-10 mx-auto col-md-6 align-self-center my-5">
           <div class="about-img__container">
-            <img src="img/sweets-1.jpeg" class="img-fluid" alt="">
+            <img src="/assets/img/sweets-1.jpeg" class="/assets/img-fluid" alt="">
           </div>
         </div>
       </div>
@@ -240,8 +228,8 @@ https://www.iconfinder.com/korawan_m
         <!-- single item -->
         <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 store-item sweets" data-item="sweets">
           <div class="card ">
-            <div class="img-container">
-              <img src="img/abaya-1.gif" class="card-img-top store-img" alt="">
+            <div class="/assets/img-container">
+              <img src="/assets/img/abaya-1.gif" class="card-img-top store-img" alt="">
               <span class="store-item-icon">
                 <i class="fas fa-shopping-cart"></i>
               </span>
@@ -262,8 +250,8 @@ https://www.iconfinder.com/korawan_m
         <!-- single item -->
         <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 store-item cupcakes" data-item="cupcakes">
           <div class="card ">
-            <div class="img-container">
-              <img src="img/cupcake-1.jpeg" class="card-img-top store-img" alt="">
+            <div class="/assets/img-container">
+              <img src="/assets/img/cupcake-1.jpeg" class="card-img-top store-img" alt="">
               <span class="store-item-icon">
                 <i class="fas fa-shopping-cart"></i>
               </span>
@@ -284,8 +272,8 @@ https://www.iconfinder.com/korawan_m
         <!-- single item -->
         <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 store-item cakes" data-item="cakes">
           <div class="card ">
-            <div class="img-container">
-              <img src="img/cake-1.jpeg" class="card-img-top store-img" alt="">
+            <div class="/assets/img-container">
+              <img src="/assets/img/cake-1.jpeg" class="card-img-top store-img" alt="">
               <span class="store-item-icon">
                 <i class="fas fa-shopping-cart"></i>
               </span>
@@ -306,17 +294,17 @@ https://www.iconfinder.com/korawan_m
         <!-- single item -->
         <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 store-item doughnuts" data-item="dougnuts">
           <div class="card ">
-            <div class="img-container">
-              <img src="img/doughnut-1.jpg" class="card-img-top store-img" alt="">
+            <div class="/assets/img-container">
+              <img src="/assets/img/doughnut-1.jpg" class="card-img-top store-img" alt="">
               <span class="store-item-icon">
                 <i class="fas fa-shopping-cart"></i>
               </span>
             </div>
             <div class="card-body">
               <div class="card-text d-flex justify-content-between text-capitalize">
+                
                 <h5 id="store-item-name">abaya class</h5>
-                <h5 class="store-item-value">$ <strong id="store-item-price" class="font-weight-bold">5</strong></h5>
-
+                <h5 class="store-item-value">BD <strong id="store-item-price" class="font-weight-bold">25</strong></h5>
               </div>
             </div>
 
@@ -328,8 +316,8 @@ https://www.iconfinder.com/korawan_m
         <!-- single item -->
         <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 store-item sweets" data-item="sweets">
           <div class="card ">
-            <div class="img-container">
-              <img src="img/sweets-2.jpg" class="card-img-top store-img" alt="">
+            <div class="/assets/img-container">
+              <img src="/assets/img/sweets-2.jpg" class="card-img-top store-img" alt="">
               <span class="store-item-icon">
                 <i class="fas fa-shopping-cart"></i>
               </span>
@@ -350,8 +338,8 @@ https://www.iconfinder.com/korawan_m
         <!-- single item -->
         <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 store-item cupcakes" data-item="cupcakes">
           <div class="card ">
-            <div class="img-container">
-              <img src="img/cupcake-2.gif" class="card-img-top store-img" alt="">
+            <div class="/assets/img-container">
+              <img src="/assets/img/cupcake-2.gif" class="card-img-top store-img" alt="">
               <span class="store-item-icon">
                 <i class="fas fa-shopping-cart"></i>
               </span>
@@ -372,8 +360,8 @@ https://www.iconfinder.com/korawan_m
         <!-- single item -->
         <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 store-item cakes" data-item="cakes">
           <div class="card ">
-            <div class="img-container">
-              <img src="img/cake-2.jpeg" class="card-img-top store-img" alt="">
+            <div class="/assets/img-container">
+              <img src="/assets/img/cake-2.jpeg" class="card-img-top store-img" alt="">
               <span class="store-item-icon">
                 <i class="fas fa-shopping-cart"></i>
               </span>
@@ -394,8 +382,8 @@ https://www.iconfinder.com/korawan_m
         <!-- single item -->
         <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 store-item doughnuts" data-item="dougnuts">
           <div class="card ">
-            <div class="img-container">
-              <img src="img/doughnut-2.jpeg" class="card-img-top store-img" alt="">
+            <div class="/assets/img-container">
+              <img src="/assets/img/doughnut-2.jpeg" class="card-img-top store-img" alt="">
               <span class="store-item-icon">
                 <i class="fas fa-shopping-cart"></i>
               </span>
@@ -416,8 +404,8 @@ https://www.iconfinder.com/korawan_m
         <!-- single item -->
         <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 store-item sweets" data-item="sweets">
           <div class="card ">
-            <div class="img-container">
-              <img src="img/sweets-3.jpg" class="card-img-top store-img" alt="">
+            <div class="/assets/img-container">
+              <img src="/assets/img/sweets-3.jpg" class="card-img-top store-img" alt="">
               <span class="store-item-icon">
                 <i class="fas fa-shopping-cart"></i>
               </span>
@@ -438,8 +426,8 @@ https://www.iconfinder.com/korawan_m
         <!-- single item -->
         <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 store-item cupcakes" data-item="cupcakes">
           <div class="card ">
-            <div class="img-container">
-              <img src="img/cupcake-3.jpg" class="card-img-top store-img" alt="">
+            <div class="/assets/img-container">
+              <img src="/assets/img/cupcake-3.jpg" class="card-img-top store-img" alt="">
               <span class="store-item-icon">
                 <i class="fas fa-shopping-cart"></i>
               </span>
@@ -460,8 +448,8 @@ https://www.iconfinder.com/korawan_m
         <!-- single item -->
         <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 store-item cakes" data-item="cakes">
           <div class="card ">
-            <div class="img-container">
-              <img src="img/cake-3.gif" class="card-img-top store-img" alt="">
+            <div class="/assets/img-container">
+              <img src="/assets/img/cake-3.gif" class="card-img-top store-img" alt="">
               <span class="store-item-icon">
                 <i class="fas fa-shopping-cart"></i>
               </span>
@@ -482,8 +470,8 @@ https://www.iconfinder.com/korawan_m
         <!-- single item -->
         <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 store-item doughnuts" data-item="dougnuts">
           <div class="card ">
-            <div class="img-container">
-              <img src="img/doughnut-3.jpeg" class="card-img-top store-img" alt="">
+            <div class="/assets/img-container">
+              <img src="/assets/img/doughnut-3.jpeg" class="card-img-top store-img" alt="">
               <span class="store-item-icon">
                 <i class="fas fa-shopping-cart"></i>
               </span>
@@ -522,13 +510,99 @@ https://www.iconfinder.com/korawan_m
 
 
   <!-- jquery -->
-  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="/js/jquery-3.3.1.min.js"></script>
   <!-- bootstrap js -->
-  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="/js/bootstrap.bundle.min.js"></script>
   <!-- script js -->
-  <script src="js/hashpswd-sha256.js"></script>
-  <script src="js/loginLocalStoreg.js"></script>
-  <script src="js/app.js"></script>
+  <script src="/js/hashpswd-sha256.js"></script>
+  <script src="/js/loginLocalStoreg.js"></script>
+  <script src="/js/app.js"></script>
+  <script>
+  // تحديد العناصر
+  const cartInfo = document.getElementById('cart-info');
+  const cart = document.getElementById('cart');
+  const cartItems = document.getElementById('cart-items');
+  const clearCartBtn = document.getElementById('clear-cart');
+  const checkoutBtn = document.getElementById('checkout');
+  const cartTotal = document.getElementById('cart-total');
+  const storeItems = document.querySelectorAll('.store-item');
+  
+  // إظهار/إخفاء السلة
+  cartInfo.addEventListener('click', function() {
+    cart.classList.toggle('show-cart');
+  });
+  
+  // إضافة منتج إلى السلة
+  storeItems.forEach(item => {
+    item.addEventListener('click', function(event) {
+      if (event.target.classList.contains('store-item-icon')) {
+        let fullPath = event.target.parentElement.previousElementSibling.src;
+        let pos = fullPath.indexOf('img') + 3;
+        let partPath = fullPath.slice(pos);
+  
+        const item = {};
+        item.img = `img-cart${partPath}`;
+        item.name = event.target.parentElement.nextElementSibling.children[0].children[0].textContent;
+        item.price = event.target.parentElement.nextElementSibling.children[0].children[1].textContent;
+  
+        addItemToCart(item);
+      }
+    });
+  });
+  
+  // وظيفة إضافة منتج إلى السلة
+  function addItemToCart(item) {
+    const cartItem = document.createElement('div');
+    cartItem.classList.add('cart-item', 'd-flex', 'justify-content-between', 'text-capitalize', 'my-3');
+    cartItem.innerHTML = `
+      <img src="${item.img}" class="img-fluid rounded-circle" id="item-img" alt="">
+      <div class="item-text">
+        <p id="cart-item-title" class="font-weight-bold mb-0">${item.name}</p>
+        <span>BD</span>
+        <span id="cart-item-price" class="cart-item-price" class="mb-0">${item.price}</span>
+      </div>
+      <a href="#" id='cart-item-remove' class="cart-item-remove">
+        <i class="fas fa-trash"></i>
+      </a>
+    `;
+    cartItems.appendChild(cartItem);
+    showTotals();
+  }
+  
+  // حساب وعرض المجموع
+  function showTotals() {
+    const total = [];
+    const items = document.querySelectorAll('.cart-item-price');
+    items.forEach(item => {
+      total.push(parseFloat(item.textContent));
+    });
+    const totalMoney = total.reduce((total, item) => {
+      total += item;
+      return total;
+    }, 0);
+    cartTotal.textContent = totalMoney.toFixed(2);
+  }
+  
+  // إفراغ السلة
+  clearCartBtn.addEventListener('click', function() {
+    cartItems.innerHTML = '';
+    showTotals();
+  });
+  
+  // إزالة منتج واحد
+  cartItems.addEventListener('click', function(event) {
+    if (event.target.classList.contains('cart-item-remove')) {
+      event.target.parentElement.remove();
+      showTotals();
+    }
+  });
+  
+  // زر الدفع
+  checkoutBtn.addEventListener('click', function() {
+    alert('شكراً لشرائك! سيتم توجيهك إلى صفحة الدفع.');
+    // هنا يمكنك إضافة التوجيه إلى صفحة الدفع الخاصة بك
+  });
+  </script>
 </body>
 
 </html>
